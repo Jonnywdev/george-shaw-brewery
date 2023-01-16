@@ -123,17 +123,28 @@ header .container {
     right: 0;
     bottom: 0;
     text-align: center;
-    max-width: 25%;
+    max-width: 50%;
+}
+
+.hero-overlay h6 {
+    font-size: 25px;
+    font-weight: 300;
 }
 
 .basic-btn {
     padding: 5px 15px;
     text-align: center;
-    font-size: 15px;
-    font-weight: 500;
+    font-size: 30px;
+    font-weight: 200;
 }
 
 .white-btn {
     background: #fff;
     color: #000;
+    transition: all .5s;
+}
+
+.white-btn:hover {
+    background: #000;
+    color: #fff;
 }
