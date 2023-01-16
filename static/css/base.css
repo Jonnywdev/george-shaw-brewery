@@ -29,6 +29,16 @@ a:hover {
     display: flex;
 }
 
+.container-margin-y {
+    margin-top: 3rem !important;
+    margin-bottom: 3rem !important;
+}
+
+.main-header {
+    text-transform: capitalize;
+    font-size: 2rem;
+}
+
 
 /* header */
 header {
@@ -107,13 +117,11 @@ header .container {
 
 .hero-image {
     width: 100%;
+    position: relative;
 }
 
 .hero-image img {
     max-width: 100%;
-    position: relative;
-    top: 0;
-    left: 0;
 }
 
 .hero-overlay {
@@ -121,7 +129,7 @@ header .container {
     position: absolute;
     padding: 25px;
     right: 0;
-    bottom: 0;
+    bottom: 2rem;
     text-align: center;
     max-width: 50%;
 }
@@ -147,4 +155,17 @@ header .container {
 .white-btn:hover {
     background: #000;
     color: #fff;
+}
+
+/* cards */
+.card-left {
+    margin-right: 1.5rem;
+}
+
+.card-middle {
+    margin: 0 1.5rem;
+}
+
+.card-right {
+    margin-left: 1.5rem;
 }
