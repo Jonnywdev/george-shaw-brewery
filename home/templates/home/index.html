@@ -1,8 +1,22 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
 {% block content %}
-<h1 class="display-4 text-success">
-    It works!
-</h1>
+<div class="hero-image">
+    <img src="" alt="Bottles of beers">
+    <div class="hero-overlay">
+        <h6 class="text-white pb-5">
+            Get beer delivered straight to your house!
+        </h6>
+        <a href="" class="basic-btn white-btn">Shop Now</a>
+    </div>
+</div>
 {% endblock %}
