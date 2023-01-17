@@ -178,6 +178,9 @@ header .container {
     margin-left: 1.5rem;
 }
 
+.card:hover {
+    box-shadow: 4px 4px 15px #888;
+}
 /* media queries */
 @media (max-width: 992px) {
     /* header */
