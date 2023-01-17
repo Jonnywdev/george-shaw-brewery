@@ -113,6 +113,10 @@ header .container {
     text-decoration: none !important;
 }
 
+.search-dropdown {
+    transform: translate3d(0, 122px, 0px) !important;
+}
+
 /* hero image */
 
 .hero-image {
@@ -168,4 +172,21 @@ header .container {
 
 .card-right {
     margin-left: 1.5rem;
+}
+
+/* media queries */
+@media (max-width: 992px) {
+    /* header */
+    .logo-wrapped {
+        width: 40%;
+        text-align: right;
+    }
+
+    .logo-wrapped img {
+        max-width: 20%;
+    }
+
+    .container {
+        max-width: 850px;
+    }
 }
