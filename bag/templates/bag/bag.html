@@ -14,7 +14,7 @@
         <div class="row">
             <div class="col">
                 <hr>
-                <h2 class="main-header mb-4">Shopping bag</h2>
+                <h2 class="main-header mb-4">Shopping basket</h2>
                 <hr>
             </div>
         </div>
@@ -25,11 +25,11 @@
                         <table class="table table-sm table-borderless">
                             <thead class="text-black">
                                 <tr>
-                                    <th scope="col">Product Info</th>
+                                    <th scope="col"><h5 class="sub-header">Product Info</h5></th>
                                     <th scope="col"></th>
-                                    <th scope="col">Price</th>
-                                    <th scope="col">Qty</th>
-                                    <th scope="col">Subtotal</th>
+                                    <th scope="col"><h5 class="sub-header">Price</h5></th>
+                                    <th scope="col"><h5 class="sub-header">Qty</h5></th>
+                                    <th scope="col"><h5 class="sub-header">Subtotal</h5></th>
                                 </tr>
                             </thead>
 
@@ -54,10 +54,10 @@
                                 </tr>
                             {% endfor %}
                             <tr>
-                                <td class="pt-5 text-right" colspan="5">
-                                    <h6><strong>Bag Total: £{{ total|floatformat:2 }}</strong></h6>
+                                <td class="py-3 text-right" colspan="5">
+                                    <h6><strong class="total-txt">Bag Total: £{{ total|floatformat:2 }}</strong></h6>
                                     <h6>{{ delivery|floatformat:2 }}</h6>
-                                    <h4 class="mt-4"><strong>Grand Total: £{{ grand_total|floatformat:2 }}</strong></h4>
+                                    <h4 class="mt-4 grand-total"><strong>Grand Total: £{{ grand_total|floatformat:2 }}</strong></h4>
                                     {% if free_delivery > 0 %}
                                         <p class="mb-1 text-danger">
                                             You could get free delivery by spending just <strong>£{{ free_delivery_delta }}</strong>
@@ -66,14 +66,14 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td class="text-right" colspan="5">
-                                    <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                                <td class="text-right bottom-basket pt-4" colspan="5">
+                                    <a href="{% url 'products' %}" class="white-btn">
                                         <span class="icon">
                                             <i class="fas fa-chevron-left"></i>
                                         </span>
                                         <span class="text-uppercase">keep shopping</span>
                                     </a>
-                                    <a href="" class="btn btn-outline-black rounded-0 btn-lg">
+                                    <a href="" class="black-btn ml-3">
                                         <span class="text-upperase">Secure checkout</span>
                                         <span class="icon">
                                             <i class="fas fa-lock"></i>

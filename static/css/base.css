@@ -48,6 +48,13 @@ a:hover {
     font-weight: 400;
 }
 
+.sub-header {
+    font-size: 1rem;
+    font-weight: 300;
+    text-transform: capitalize;
+    margin-top: 0.5rem;
+}
+
 /* back to top btn */
 .bck-to-top {
     display: none;
@@ -186,11 +193,26 @@ header .container {
     background: #fff;
     color: #000;
     transition: all .5s;
+    border: 2px solid #fff;
 }
 
 .white-btn:hover {
     background: #000;
     color: #fff;
+    border: 2px solid #000;
+}
+
+.black-btn {
+    background: #000;
+    color: #fff;
+    transition: all .5s;
+    border: 2px solid #000;
+}
+
+.black-btn:hover {
+    background: #fff;
+    color: #000;
+    border: 2px solid #000;
 }
 
 /* cards */
@@ -220,6 +242,21 @@ header .container {
     background: #000;
     color: #fff;
     padding: 2rem 0;
+}
+
+.total-txt {
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.grand-total {
+    font-weight: 500;
+    font-size: 25px;
+}
+
+.bottom-basket .white-btn, .black-btn {
+    font-size: 15px !important;
+    padding: 10px;
 }
 
 /* media queries */
