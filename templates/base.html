@@ -88,12 +88,12 @@
                             </div>
                         </li>
                         <li>
-                            <a class="" href="{% url 'view_bag' %}">
+                            <a href="{% url 'view_bag' %}">
                                 <div class="text-center">
                                     <div class="basket-wrapped"><i class="fa-solid fa-basket-shopping fa-lg cart main-hover-txt main-icon"></i>
                                         <p class="my-0 cart main-hover-txt cart-text">
                                             {% if grand_total %}
-                                                ${{ grand_total|floatformat:2 }}
+                                                £{{ grand_total|floatformat:2 }}
                                             {% else %}
                                                 £0.00
                                             {% endif %}
