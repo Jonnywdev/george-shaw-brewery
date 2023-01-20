@@ -49,18 +49,22 @@
                                         <p class="my-0">{{ item.quantity }}</p>
                                     </td>
                                     <td class="py-3">
-                                        <p class="my-0">{{ item.product.price }}</p>
+                                        <p class="my-0">£{{ item.product.price }}</p>
                                     </td>
                                 </tr>
                             {% endfor %}
                             <tr>
                                 <td class="py-3 text-right" colspan="5">
                                     <h6><strong class="total-txt">Bag Total: £{{ total|floatformat:2 }}</strong></h6>
-                                    <h6>{{ delivery|floatformat:2 }}</h6>
+                                    <h6>Delivery Cost: £{{ delivery|floatformat:2 }}</h6>
                                     <h4 class="mt-4 grand-total"><strong>Grand Total: £{{ grand_total|floatformat:2 }}</strong></h4>
-                                    {% if free_delivery > 0 %}
+                                    {% if delivery > 0 %}
                                         <p class="mb-1 text-danger">
                                             You could get free delivery by spending just <strong>£{{ free_delivery_delta }}</strong>
+                                        </p>
+                                    {% else %}
+                                        <p class="mb-1 text-success">
+                                            You have qualified for free delivery!
                                         </p>
                                     {% endif %}
                                 </td>
@@ -84,13 +88,15 @@
                         </table>
                     </div>
                 {% else %}
+                <div class="bottom-basket">
                     <p class="lead mb-5">Your bag is empty.</p>
-                    <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-large">
+                    <a href="{% url 'products' %}" class="white-btn">
                         <span class="icon">
                             <i class="fas fa-chevron-left"></i>
                         </span>
                         <span class="text-uppercase">Keep Shopping</span>
                     </a>
+                </div>
                 {% endif %}
             </div>
         </div>
