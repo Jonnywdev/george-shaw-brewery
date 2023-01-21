@@ -248,6 +248,8 @@ header .container {
     padding: 2rem 0;
 }
 
+/* basket */
+
 .total-txt {
     font-weight: 500;
     font-size: 20px;
@@ -261,6 +263,21 @@ header .container {
 .bottom-basket .white-btn, .black-btn {
     font-size: 15px !important;
     padding: 10px;
+}
+
+.basket-page-wrapped {
+    display: flex;
+    flex-direction: row;
+}
+
+.list-basket {
+    max-width: 60%;
+
+}
+
+.total-basket {
+    max-width: 35%;
+
 }
 
 /* media queries */
