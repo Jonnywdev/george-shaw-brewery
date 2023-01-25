@@ -25,6 +25,12 @@ a:hover {
     text-decoration: none !important;
 }
 
+button::after, button:focus {
+    outline: none !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
 .text-black {
     color: #000;
 }
@@ -83,11 +89,14 @@ a:hover {
 }
 
 /* messages */
+/* ------------------------------- bootstrap toasts */
+
 .message-container {
     position: fixed;
     top: 72px;
     right: 15px;
     z-index: 99999999999;
+    width: 30%;
 }
 
 .custom-toast {
@@ -96,6 +105,72 @@ a:hover {
 
 .toast-capper {
     height: 2px;
+}
+
+.toast-content {
+    padding: 10px;
+    font-size: 15px;
+}
+
+.bottom-toast-col {
+    display: flex;
+    flex-direction: column;
+    width: 100% !important;
+}
+
+.bottom-toast-col .black-btn {
+    text-align: center;
+}
+
+/* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
+.arrow-up {
+    width: 0; 
+    height: 0; 
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent; 
+    border-bottom: 10px solid black;
+    position: absolute;
+    top: -10px;
+    right: 36px;
+}
+
+/* Convenience classes - colors copied from Bootstrap */
+.arrow-primary {
+    border-bottom-color: #007bff !important;
+}
+
+.arrow-secondary {
+    border-bottom-color: #6c757d !important;
+}
+
+.arrow-success {
+    border-bottom-color: #28a745 !important;
+}
+
+.arrow-danger {
+    border-bottom-color: #dc3545 !important;
+}
+
+.arrow-warning {
+    border-bottom-color: #ffc107 !important;
+}
+
+.arrow-info {
+    border-bottom-color: #17a2b8 !important;
+}
+
+.arrow-light {
+    border-bottom-color: #f8f9fa !important;
+}
+
+.arrow-dark {
+    border-bottom-color: #343a40 !important;
+}
+
+.bag-notification-wrapper {
+    height: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 
@@ -292,8 +367,44 @@ header .container {
 }
 
 .total-basket {
-    max-width: 35%;
+    max-width: 40%;
+}
 
+.w-15 {
+    width: 15% !important;
+}
+
+.quantity-b {
+    width: 22.5%;
+}
+
+.update-link {
+    color: #000 !important;
+    transition: all .5s;
+}
+
+.update-link:hover {
+    color: #28a745 !important;
+}
+
+.remove-item {
+    color: #000 !important;
+    transition: all .5s;
+}
+
+.form-group .black-btn {
+    padding: 5px;
+    border: none;
+}
+
+.form-group .black-btn:hover {
+    background-color: #343a40;
+    border: none !important;
+    color: #fff;
+}
+
+.max-c {
+    width: max-content !important;
 }
 
 /* media queries */
