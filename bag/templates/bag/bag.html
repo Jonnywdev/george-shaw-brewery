@@ -93,7 +93,8 @@
                             {% endfor %}
                         </table>
                     </div>
-            </div>
+                </div>
+            
         </div>
     </div>
     <div class="container container-margin-y total-basket">
@@ -123,7 +124,7 @@
                             </span>
                             <span class="text-uppercase">keep shopping</span>
                         </a>
-                        <a href="" class="black-btn ml-3">
+                        <a href="{% url 'checkout' %}" class="black-btn ml-3">
                             <span class="text-upperase">Secure checkout</span>
                             <span class="icon">
                                 <i class="fas fa-lock"></i>
