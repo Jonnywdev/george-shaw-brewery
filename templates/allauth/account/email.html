@@ -4,8 +4,11 @@
 
 {% block head_title %}{% trans "Account" %}{% endblock %}
 
-{% block content %}
-    <h1>{% trans "E-mail Addresses" %}</h1>
+{% block inner_content %}
+
+<hr>
+<h2 class="main-header mb-4 ">{% trans "E-mail Addresses" %}</h2>
+<hr>
 {% if user.emailaddress_set.all %}
 <p>{% trans 'The following e-mail addresses are associated with your account:' %}</p>
 
@@ -31,9 +34,9 @@
   {% endfor %}
 
 <div class="buttonHolder">
-      <button class="secondaryAction" type="submit" name="action_primary" >{% trans 'Make Primary' %}</button>
-      <button class="secondaryAction" type="submit" name="action_send" >{% trans 'Re-send Verification' %}</button>
-      <button class="primaryAction" type="submit" name="action_remove" >{% trans 'Remove' %}</button>
+      <button class="secondaryAction black-btn" type="submit" name="action_primary" >{% trans 'Make Primary' %}</button>
+      <button class="secondaryAction black-btn" type="submit" name="action_send" >{% trans 'Re-send Verification' %}</button>
+      <button class="primaryAction white-btn type="submit" name="action_remove" >{% trans 'Remove' %}</button>
 </div>
 
 </fieldset>
