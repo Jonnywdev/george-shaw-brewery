@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container container-margin-y">
+    <div class="row mb-5">
+        <div class="col">
+            <h1 class="main-header text-center">News</h1>
+            <p class="text-center w-75 mx-auto">Check out all of our news articles.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="product-container col-10 offset-1">
+            <div class="row mt-1 mb-2">
+
+            </div>
+            <div class="row">
+                
+                <div class="col-sm-6 col-md-6 col-ld-4 col-xl-3">
+                    {% for newsarticles in object_list %}
+                        <div class="card h-100 border-0">
+                            {% if newsarticles.image %}
+                                <a href="">
+                                    <div class="p-img-wrapped">
+                                        <img src="" alt="{{ recentnews.title }}" class="card-img-top img-fluid">
+                                    </div>
+                                </a>
+                            {% else %}
+                                <a href="">
+                                    <img src="{{ MEDIA_URL }} noimage.png" alt="{{ recentnews.title }}" class="card-img-top img-fluid">
+                                </a>
+                            {% endif %}
+                            <div class="card-body pb-0 px-0">
+                                <div class="row">
+                                    <div class="col">
+                                        <p class="mb-0 pl-1 text-left"><b>{{ newsarticles.title }}</b></p>
+                                        <small><p class="mt-1 text-left">{{ newsarticles.author }}</p></small>
+                                    </div>
+                                </div>
+                            </div>      
+                            <hr>
+                        </div>
+                    {% endfor %}
+                </div>
+                {% if forloop.counter|divisibleby:2 %}
+                    <div class="col-12 d-sm-none mb-5">
+                    </div>
+                {% endif %}
+                {% if forloop.counter|divisibleby:2 %}
+                    <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
+                    </div>
+                {% endif%}
+                {% if forloop.counter|divisibleby:3 %}
+                    <div class="col-12 d-none d-lg-block d-xl-none mb-5">
+                        <hr>
+                    </div>
+                {% endif%}
+                {% if forloop.counter|divisibleby:4 %}
+                    <div class="col-12 d-none d-xl-block mb-5">
+                    </div>
+                {% endif%}
+            </div>
+        </div>
+    </div>
+
+    <div class="btt-button shadow-sm rounded-0 border border-black">
+        <a class="btt-link d-flex bck-to-top">
+            <i class="fas fa-arrow-up"></i>
+        </a>	
+    </div>
+
+</div>
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    <script type="text/javascript">
+        $('.btt-link').click(function(e) {
+            window.scrollTo(0,0)
+        })
+    </script>
+{% endblock %}
