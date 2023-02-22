@@ -42,7 +42,6 @@
                                 <div class="row">
                                     <div class="col">
                                         <p class="mb-0 pl-1 text-left"><b>{{ newsarticles.title }}</b></p>
-                                        <small><p class="mt-1 text-left">{{ newsarticles.author }}</p></small>
                                     </div>
                                 </div>
                             </div>      
@@ -50,7 +49,7 @@
                         </div>
                     {% endfor %}
                 </div>
-                {% if forloop.counter|divisibleby:2 %}
+                <!-- {% if forloop.counter|divisibleby:2 %}
                     <div class="col-12 d-sm-none mb-5">
                     </div>
                 {% endif %}
@@ -66,7 +65,7 @@
                 {% if forloop.counter|divisibleby:4 %}
                     <div class="col-12 d-none d-xl-block mb-5">
                     </div>
-                {% endif%}
+                {% endif%} -->
             </div>
         </div>
     </div>
