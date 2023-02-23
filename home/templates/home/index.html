@@ -20,42 +20,31 @@
     </div>
 </div>
 
-<div class="container container-margin-y">
-    <h1 class="main-header">Recent news</h1>
-    <div class="card-group">
-        <div class="card card-left">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-            </div>
+<div class="col-sm-6 col-md-6 col-ld-4 col-xl-3">
+    <h1 class="main-header text-black">Recent News</h1>
+    {% for news in article %}
+        <div class="card h-100 border-0">
+            {% if article.image %}
+                <a href="">
+                    <div class="p-img-wrapped">
+                        <img src="" alt="{{ news.title }}" class="card-img-top img-fluid">
+                    </div>
+                </a>
+            {% else %}
+                <a href="">
+                    <img src="{{ MEDIA_URL }} noimage.png" alt="{{ news.title }}" class="card-img-top img-fluid">
+                </a>
+            {% endif %}
+            <div class="card-body pb-0 px-0">
+                <div class="row">
+                    <div class="col">
+                        <p class="mb-0 pl-1 text-left"><b>{{ news.title }}</b></p>
+                    </div>
+                </div>
+            </div>      
+            <hr>
         </div>
-        <div class="card card-middle">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-            </div>
-        </div>
-        <div class="card card-middle">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-            </div>
-        </div>
-        <div class="card card-right">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-            </div>
-        </div>
-    </div>
+    {% endfor %}
 </div>
 
 <div class="timeline-container container-margin-y">
