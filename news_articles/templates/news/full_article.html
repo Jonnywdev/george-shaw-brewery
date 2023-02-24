@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container container-margin-y">
+    <div class="row">
+        <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
+            <div class="image-container my-5">
+                {% if post.image %}
+                    <a href="{{ post.image.url }}" target="_blank">
+                        <div class="p-img-wrapped">
+                            <img src="{{ post.image.url }}" alt="" class="card-img-top img-fluid">
+                        </div>
+                    </a>
+                {% else %}
+                    <a href="">
+                        <img src="{{ MEDIA_URL }} noimage.png" alt="" class="card-img-top img-fluid">
+                    </a>
+                {% endif %}
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="product-details-container mb-5 mt-md-5">
+
+                {% if request.user.is_superuser %}
+                    <small class="ml-3">
+                        <a href="" class="text-black">Edit <i class="fa-solid fa-pen-to-square"></i></a>
+                        <a href="" class="text-danger ml-2">Delete <i class="fa-solid fa-trash"></i></a>
+                    </small>
+                {% endif %}
+                <p class="mb-0 main-header">{{ post.title }}</p>
+                <small class="text-muted pl-1"><i class="fa-solid fa-user mr-1"></i>{{ post.author }}</small><br>
+                <small class="text-muted pl-1"><i class="fa-solid fa-clock mr-1"></i>{{ post.created_on }}</small>
+                <p class="card-text">{{ post.content | safe }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
