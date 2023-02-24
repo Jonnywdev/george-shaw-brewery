@@ -80,12 +80,13 @@
                                 {% if request.user.is_authenticated %}
                                     {% if request.user.is_superuser %}
                                         <a href="{% url 'add_product' %}" class="dropdown-item main-hover-txt">Add Product</a>
+                                        <a href="{% url 'add_article' %}" class="dropdown-item main-hover-txt">Add Article</a>
                                     {% endif %}
-                                    <a href="{% url 'profile' %}" class="dropdown-item main-hover-txt">My Profile</a>
-                                    <a href="{% url 'account_logout' %}" class="dropdown-item main-hover-txt">Sign Out</a>
+                                        <a href="{% url 'profile' %}" class="dropdown-item main-hover-txt">My Profile</a>
+                                        <a href="{% url 'account_logout' %}" class="dropdown-item main-hover-txt">Sign Out</a>
                                 {% else %}
-                                    <a href="{% url 'account_signup' %}" class="dropdown-item main-hover-txt">Register</a>
-                                    <a href="{% url 'account_login' %}" class="dropdown-item main-hover-txt">Sign In</a>
+                                        <a href="{% url 'account_signup' %}" class="dropdown-item main-hover-txt">Register</a>
+                                        <a href="{% url 'account_login' %}" class="dropdown-item main-hover-txt">Sign In</a>
                                 {% endif %}
                             </div>
                         </li>

@@ -492,6 +492,29 @@ header .container {
     border-radius: 0;
 }
 
+/* news */
+.readmore {
+    background: #000;
+    text-align: center;
+    color: #fff;
+    padding: 5px 0;
+    width: 100%;
+    transition: all .5s;
+    cursor: pointer;
+}
+
+.readmore:hover {
+    background: #222;
+}
+
+.recent-news {
+    align-items: flex-end;
+}
+
+.news-title {
+    padding: 1.25rem;
+}
+
 /* media queries */
 @media (max-width: 992px) {
     /* header */
