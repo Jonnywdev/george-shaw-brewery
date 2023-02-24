@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect, reverse
 from .models import Post
 from django.views import generic
 from django.contrib import messages
@@ -9,9 +9,8 @@ from .forms import NewsForm
 
 class PostList(generic.ListView):
     model = Post
-    queryset = Post.objects.filter(status=1).order_by("-created_on")
+    queryset = Post.objects.order_by("-created_on")
     template_name = "news/news.html"
-    paginate_by = 6
 
 
 def article(request, pk):
@@ -32,7 +31,7 @@ def add_news_article(request):
         if form.is_valid():
             article = form.save()
             messages.success(request, f'You have successfully added!')
-            return redirect(reverse('news'))
+            return redirect(reverse('article', args=[article.id]))
         else:
             messages.error(request, 'Failed to add an article. Please ensure the form is valid.')
     else:
