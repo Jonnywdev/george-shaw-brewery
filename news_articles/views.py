@@ -45,7 +45,7 @@ def add_news_article(request):
     return render(request, template, context)
 
 
-def edit_news_article(request, pk):
+def edit_article(request, pk):
     """ Edit an article in the store """
     # if not request.user.is_superuser:
     #     messages.error(request, 'Sorry you do not have access to this part of the website.')
@@ -71,3 +71,16 @@ def edit_news_article(request, pk):
     }
 
     return render(request, template, context)
+
+
+def delete_article(request, pk):
+    """ Delete an article """
+    # if not request.user.is_superuser:
+    #     messages.error(request, 'Sorry you do not have access to this part of the website.')
+    #     return redirect(reverse('home'))
+
+    article = get_object_or_404(Post, id=pk)
+    article.delete()
+    messages.success(request, f'You have successfully deleted "{article.title}"')
+
+    return redirect(reverse('news'))

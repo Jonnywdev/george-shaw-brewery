@@ -14,11 +14,12 @@
     <div class="row mb-5">
         <div class="col">
             <h1 class="main-header text-center">Recent News</h1>
+            <p class="text-center w-75 mx-auto">Check out all of our recent news articles below!</p>
         </div>
     </div>
     <div class="row">
         <div class="product-container col-10 offset-1">
-            <div class="row recent-news">
+            <div class="row recent-news">   
                 {% for post in post_list %}
                 <div class="col-sm-6 col-md-6 col-ld-4 col-xl-3">
                     <div class="card h-100 border-0">
@@ -48,8 +49,8 @@
                                     </div>
                                     {% if request.user.is_superuser %}
                                         <small class="">
-                                            <a href="{% url 'editarticle' post.id %}" class="text-black">Edit <i class="fa-solid fa-pen-to-square"></i></a>
-                                            <a href="" class="text-danger ml-2">Delete <i class="fa-solid fa-trash"></i></a>
+                                            <a href="{% url 'edit_article' post.id %}" class="text-black">Edit <i class="fa-solid fa-pen-to-square"></i></a>
+                                            <a href="{% url 'delete_article' post.id %}" class="text-danger ml-2">Delete <i class="fa-solid fa-trash"></i></a>
                                         </small>
                                     {% endif %}
                                 </div>
