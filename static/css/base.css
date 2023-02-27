@@ -38,10 +38,17 @@ input::after, input:focus {
 
 .text-black {
     color: #000;
+    transition: all .5s;
+}
+
+.text-black:hover {
+    opacity: 0.5;
+    color: #000;
 }
 
 .text-white {
     color: #fff;
+    transition: all .5s;
 }
 
 .pointer {
@@ -254,6 +261,10 @@ header .container {
     max-width: 25%;
 }
 
+.small-nav-itm {
+    display: none;
+}
+
 .navigation-wrapped {
     flex-direction: column;
     min-width: 50%;
@@ -287,6 +298,8 @@ header .container {
 .main-hover-txt:hover {
     color: #D1D1D1 !important;
 }
+
+
 
 .basket-wrapped {
     display: flex;
@@ -353,26 +366,29 @@ header .container {
     background: #fff;
     color: #000;
     transition: all .5s;
-    padding: 10px 5px;
+    padding: 12px 5px;
+    border: none;
+    font-size: 20px;
+    text-transform: uppercase;
 }
 
 .white-btn:hover {
-    background: #000;
+    background: #725538;
     color: #fff;
 }
 
 .black-btn {
-    background: #000;
+    background: #725538;
     color: #fff;
     transition: all .5s;
-    border: 2px solid #000;
     padding: 10px 5px;
+    border: none;
+    text-transform: uppercase;
 }
 
 .black-btn:hover {
-    background: #fff;
-    color: #000;
-    border: 2px solid #000;
+    background: #4E3A25;
+    color: #fff;
 }
 
 /* cards */
@@ -621,7 +637,7 @@ header .container {
 }
 
 .form-group .black-btn:hover {
-    background-color: #343a40;
+    background-color: #4E3A25;
     border: none !important;
     color: #fff;
 }
@@ -713,6 +729,10 @@ header .container {
         max-width: 100%;
     }
 
+    .hero-image {
+        margin-top: 6rem;
+    }
+
     .hero-overlay h6 {
         padding-bottom: 1rem !important;
     }
@@ -741,13 +761,150 @@ header .container {
         display: flex;
         margin-top: 5rem;
         margin-bottom: 5rem;
+        justify-content: space-between;
+    }
+
+    .sml-hero-img {
+        width: 45%;
+    }
+
+    .sml-hero-img img {
+        max-width: 100%;
+    }
+    
+    .sml-hero-txt {
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .sml-hero-txt a {
+        width: 100%;
+        text-align: center;
     }
 }
 
-@media (max-width: 575px) {
+@media (max-width: 576px) {
+    /* header */
+    .nav-link {
+        padding: 0.5rem  0.15rem !important;
+    }
 
+    /* hero image */
+    .sml-hero-txt h3 {
+        font-size: 25px;
+    }
+
+    .hero-image {
+        margin-top: 4rem;
+    }
+
+    /* timeline */
+    .fa-circle-arrow-left {
+        left: 1rem;
+    }
+
+    .fa-circle-arrow-right {
+        right: 1rem;
+    }
+
+    /* newsletter */
+    .newsletter h1 {
+        font-size: 2.3rem;
+    }
+
+    .connect-content {
+        padding: 2rem;
+    }
+
+    .connect h2 {
+        font-size: 1.5rem;
+    }
+
+    .connect p {
+        font-size: 15px;
+    }
+
+    .connect-socials a {
+        font-size: 2.5rem;
+    }
 }
 
 @media (max-width: 420px) {
+    /* navigation */
+    .small-nav-itm {
+        display: block;
+    }
+
+    .drpdown {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .small-dropdown-item {
+        padding: 5px 0;
+        display: block;
+        width: 100%;
+        clear: both;
+        font-weight: 400;
+        text-align: inherit;
+        white-space: nowrap;
+        background-color: transparent;
+    }
+
+    .small-nav-hr {
+        margin: 0.25rem 0;
+    }
+
+    .small-dropdown {
+        display: none;
+    }
+
+    /* hero image */
+    .hero-image {
+        margin-top: 3rem;
+    }
+
+    .small-hero-content {
+        flex-direction: column-reverse;
+        margin-top: 3rem;
+        margin-bottom: 5rem;
+    }
+
+    .sml-hero-txt {
+        width: 100%;
+        margin-bottom: 3rem;
+    }
+
+    .sml-hero-img {
+        width: 100%;
+    }
+
+    .sml-hero-txt h3 {
+        font-size: 20px;
+        margin-bottom: 2rem;
+    }
+
+    /* newsletter */
+    .newsletter-wrapped {
+        flex-direction: column;
+    }
+
+    .newsletter {
+        width: 100%;
+        margin-bottom: 4rem;
+    }
+
+    .connect {
+        width: 100%;
+    }
+
+    .connect-socials {
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    
 
 }
