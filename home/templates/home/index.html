@@ -11,7 +11,7 @@
 
 {% block content %}
 <div class="hero-image">
-    <img src="{{ 'media/hero-img.png' }}" alt="Bottles of beers">
+    <img src="{{ 'media/beer-hero.jpeg' }}" alt="Bottles of beers">
     <div class="hero-overlay">
         <h6 class="text-white pb-5 text-capitalize">
             Get beer delivered straight to your house!
@@ -25,6 +25,60 @@
     <div class="container">
         <h1 class="main-header text-white">Our Story so far</h1>
     </div>
+    <div class="timeline-wrapped">
+        <i class="fa-solid fa-circle-arrow-left"></i>
+        <div class="timeline-cards-container">
+            <div class="timeline-card">
+                <div class="timeline-img">
+                    <img src="{{ 'media/timeline-1.png' }}" alt="">
+                </div>
+                <div class="timeline-txt">
+                    <h3>1864</h3>
+                    <p>George Shaw was created!</p>
+                </div>
+            </div>
+            <div class="timeline-arrow">
+                <i class="fa-solid fa-arrow-right"></i>
+            </div>
+            <div class="timeline-card">
+                <div class="timeline-img">
+                    <img src="{{ 'media/timeline-1.png' }}" alt="">
+                </div>
+                <div class="timeline-txt">
+                    <h3>1864</h3>
+                    <p>George Shaw was created!</p>
+                </div>
+            </div>
+            <div class="timeline-arrow">
+                <i class="fa-solid fa-arrow-right"></i>
+            </div>
+            <div class="timeline-card">
+                <div class="timeline-img">
+                    <img src="{{ 'media/timeline-1.png' }}" alt="">
+                </div>
+                <div class="timeline-txt">
+                    <h3>1864</h3>
+                    <p>George Shaw was created!</p>
+                </div>
+            </div>
+            <div class="timeline-arrow">
+                <i class="fa-solid fa-arrow-right"></i>
+            </div>
+            <div class="timeline-card">
+                <div class="timeline-img">
+                    <img src="{{ 'media/timeline-1.png' }}" alt="">
+                </div>
+                <div class="timeline-txt">
+                    <h3>1864</h3>
+                    <p>George Shaw was created!</p>
+                </div>
+            </div>
+            <div class="timeline-arrow">
+                <i class="fa-solid fa-arrow-right"></i>
+            </div>
+        </div>
+        <i class="fa-solid fa-circle-arrow-right"></i>
+    </div>
     
 </div>
 
@@ -37,6 +91,11 @@
 
 {% block postloadjs %}
 {{ block.super }}
+<!-- for timeline carosel -->
+<script type="text/javascript">
+
+</script>
+
 <script type="text/javascript">
     $('.btt-link').click(function(e) {
         window.scrollTo(0,0)

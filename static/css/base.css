@@ -314,6 +314,8 @@ header .container {
 .hero-image {
     width: 100%;
     position: relative;
+    z-index: 1;
+    top: -1;
 }
 
 .hero-image img {
@@ -321,7 +323,7 @@ header .container {
 }
 
 .hero-overlay {
-    background: rgba(100, 100, 100, 0.7);
+    background: rgba(114, 85, 56, 0.7);
     position: absolute;
     padding: 25px;
     right: 0;
@@ -392,9 +394,82 @@ header .container {
 
 /* timeline */
 .timeline-container {
-    background: #000;
+    background: #725538;
     color: #fff;
     padding: 2rem 0;
+}
+
+.timeline-wrapped {
+    display: flex;
+    flex-direction: row;
+    padding: 10px 20px;
+    align-items: center;
+}
+
+.timeline-wrapped i {
+    font-size: 2.5rem;
+    opacity: 0.5;
+    transition: all .5s;
+}
+
+.timeline-wrapped i:hover {
+    opacity: 1;
+}
+
+.fa-circle-arrow-left {
+    position: absolute;
+    left: 3rem;
+}
+
+.fa-circle-arrow-right {
+    position: absolute;
+    right: 3rem;
+}
+
+.timeline-cards-container {
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.timeline-card {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    text-align: center;
+}
+
+.timeline-img {
+    margin: 10px auto;
+    width: 150px;
+}
+
+.timeline-img img {
+    border-radius: 100%;
+    max-width: 100%;
+}
+
+.timeline-card:hover {
+    max-width: 125%;
+}
+
+
+.timeline-txt h3{
+    font-size: 1.5rem;
+}
+
+.timeline-txt p {
+    font-size: 1rem;
+}
+
+.timeline-arrow i{
+    color: #fff !important;
+    font-size: 1.5rem;
+}
+
+.timeline-arrow i:hover {
+    color: #fff !important;
 }
 
 /* basket */
