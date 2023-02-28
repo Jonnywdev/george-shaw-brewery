@@ -25,7 +25,7 @@
         <img src="{{ 'media/Product_image_8.jpeg' }}" alt="Image of beers">
     </div>
     <div class="sml-hero-txt">
-        <h3>Get beers delivered straight to your house now!</h1>
+        <h3>Get beers delivered straight to your house now!</h3>
         <a href="{% url 'products' %}" class="black-btn">Go to shop</a>
     </div>
 </div>
@@ -93,11 +93,9 @@
 </div>
 {% include 'includes/newsletter.html' %}
 
-<div class="btt-button shadow-sm rounded-0 border border-black">
-    <a class="btt-link d-flex bck-to-top">
-        <i class="fas fa-arrow-up"></i>
-    </a>	
-</div>
+
+
+
 {% endblock %}
 
 {% block postloadjs %}
@@ -105,11 +103,5 @@
 <!-- for timeline carosel -->
 <script type="text/javascript">
 
-</script>
-
-<script type="text/javascript">
-    $('.btt-link').click(function(e) {
-        window.scrollTo(0,0)
-    })
 </script>
 {% endblock %}
