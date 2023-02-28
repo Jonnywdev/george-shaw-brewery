@@ -24,7 +24,7 @@ def contact_us(request):
             send_mail(subject, message, "donotreply@georgeshawbrewery.com", ['donotreply@georgeshawbrewery.com'])
         except BadHeaderError:
             return HttpResponse('Invalid header found.')
-        return redirect("contact/thankyou.html")
+        return redirect('thankyou')
     else:
         form = ContactForm()
         context = {
@@ -32,3 +32,9 @@ def contact_us(request):
         }
 
     return render(request, 'contact/contact-us.html', context)
+
+
+def thankyou(request):
+    """ A view to show the thank you page """
+
+    return render(request, 'contact/thankyou.html')

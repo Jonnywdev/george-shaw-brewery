@@ -696,6 +696,38 @@ header .container {
     padding: 1.25rem;
 }
 
+/* contact us form */
+.contact-wrapped {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.contact-form {
+    width: 50%;
+}
+
+.contact-right {
+    width: 50%;
+}
+
+.otherways-tc {
+    text-align: left;
+    width: 33%;
+}
+
+.otherways-tc h5 {
+    font-size: 1.5rem;
+}
+
+.otherways-tc p {
+
+}
+
+.contact-right img {
+    max-width: 100%;
+}
+
 /* footer */
 footer {
     width: 100%;
