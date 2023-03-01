@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block extra_css %}
+    <link rel="icon" type="image/x-icon" href="{{'media/gs-favicon.png'}}">
+{% endblock %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container container-margin-y">
+    <div class="row mb-5">
+        <div class="col">
+            <h1 class="main-header text-os">Our Story</h1>
+        </div>
+    </div>
+    <div class="about-row">
+        <div class="about-txt">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Nulla massa elit, hendrerit suscipit justo eget, 
+                sollicitudin commodo sapien. Duis ac bibendum lectus, 
+                eu malesuada tortor. Vivamus sit amet ligula sit amet 
+                risus convallis aliquet sit amet at eros. 
+                Etiam sollicitudin condimentum imperdiet. 
+                Maecenas dictum massa nec consequat tincidunt. 
+                Maecenas eu neque nisi. Maecenas pharetra massa ut 
+                massa varius mattis.
+                <br><br>
+                Quisque et leo et lectus placerat tempor at imperdiet nisl. 
+                Nulla placerat id odio quis sagittis. Mauris finibus 
+                in mi nec accumsan. Ut ut dignissim urna. Nam tempus 
+                dictum quam quis ultricies. Nunc venenatis turpis diam, 
+                non ultricies nulla laoreet non. Integer fermentum tempus 
+                dolor a accumsan. Vivamus et sagittis lectus. 
+                Cras at malesuada risus, ac posuere sem.
+                <br><br>
+                Aliquam a molestie velit. Nunc efficitur eu orci et tincidunt. 
+                In tincidunt, nisi a tincidunt rutrum, neque dui pharetra 
+                eros, non cursus neque quam imperdiet purus. 
+                Fusce sit amet enim tristique, vestibulum sapien non, 
+                viverra velit. Nulla a ante sit amet arcu bibendum vehicula 
+                in quis magna. Vestibulum non luctus lacus. 
+                Duis dapibus auctor elit in malesuada. Nulla at ex nunc. 
+                Cras sit amet volutpat nibh. Praesent a augue id nibh 
+                eleifend auctor.
+            </p>
+        </div>
+        <div class="about-img">
+            <img src="{{ MEDIA_URL }}our-story-1.jpeg" alt="Meet the team">
+        </div>
+    </div>
+    <div class="our-images mt-4">
+        <img src="{{ MEDIA_URL }}our-story-2.jpeg" alt="Some of our team selling our beers at Leigh Spinners">
+        <img src="{{ MEDIA_URL }}our-story-3.jpeg" alt="Some of our team selling our beers at Leigh Spinners">
+        <img src="{{ MEDIA_URL }}our-story-4.jpeg" alt="Some of our team selling our beers at Leigh Festival">
+    </div>
+</div>
+
+{% include 'includes/newsletter.html' %}
+
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+{% endblock %}
