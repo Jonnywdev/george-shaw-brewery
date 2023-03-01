@@ -646,6 +646,16 @@ header .container {
     width: max-content !important;
 }
 
+.order-confirmation-wrapper {
+    overflow: hidden;
+}
+
+.c-s-title {
+    border-bottom: 1px solid #6c757d;
+    opacity: 0.5;
+    margin-bottom: 5px;
+}
+
 /* Product Form */
 .btn-file {
     position: relative;
@@ -704,16 +714,19 @@ header .container {
 }
 
 .contact-form {
-    width: 50%;
+    width: 45%;
 }
 
 .contact-right {
-    width: 50%;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
 
 .otherways-tc {
-    text-align: left;
-    width: 33%;
+    width: 100%;
+    text-align: end;
 }
 
 .otherways-tc h5 {
@@ -726,6 +739,11 @@ header .container {
 
 .contact-right img {
     max-width: 100%;
+    margin-top: 2rem;
+}
+
+.contact-submit {
+    width: 100%;
 }
 
 /* footer */
@@ -867,6 +885,13 @@ footer {
     }
 }
 
+@media (max-width: 850px) {
+    /* footer */
+    .footer-wrapped {
+        justify-content: space-around;
+    }
+}
+
 @media (max-width: 768px) {
     .logo-wrapped {
         width: 13%;
@@ -908,19 +933,38 @@ footer {
         text-align: center;
     }
 
+    /* contact us */
+    .contact-wrapped {
+        flex-direction: column;
+    }
+
+    .contact-form {
+        margin: 0 auto;
+    }
+
+    .contact-right {
+        width: 75%;
+        margin: 4rem auto 2rem auto;
+    }
+
     /* footer */
 
     .footer-wrapped {
         flex-direction: column;
         align-items: center;
+        justify-content: space-between;
     }
 
     .left-f-wrapped, .right-f-wrapped {
         width: 92%;
     }
 
-    .footer-content, #c-information {
+    .footer-content {
         min-width: 37%;
+    }
+
+    #c-information, #follow-us {
+        min-width: 42%;
     }
 
     .footer-copy {
@@ -978,12 +1022,24 @@ footer {
         min-width: 50%;
     }
 
+    #c-information, #follow-us {
+        text-align: end;
+    }
+
+    .f-socials {
+        justify-content: flex-end;
+    }
+
     .footer-copy {
         font-size: 10px;
     }
 }
 
 @media (max-width: 420px) {
+    /* generic */
+    .container-margin-y {
+        margin-top: 7rem !important;
+    }
     /* navigation */
     .small-nav-itm {
         display: block;
@@ -1055,6 +1111,11 @@ footer {
     .connect-socials {
         width: 50%;
         margin: 0 auto;
+    }
+
+    /* CONTAct */
+    .contact-form {
+        width: 75%;
     }
 
     /* footer */
