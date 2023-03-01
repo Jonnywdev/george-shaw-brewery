@@ -769,6 +769,14 @@ header .container {
     text-align: left;
 }
 
+/* infomation pages */
+.info-text {
+    text-align: left;
+}
+
+.info-text b {
+    text-decoration: underline;
+}
 
 /* footer */
 footer {
