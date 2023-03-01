@@ -3,10 +3,10 @@ from django.shortcuts import render
 # Create your views here.
 
 
-def cookie(request):
+def refund(request):
     """ A view to return the index page """
 
-    return render(request, 'info/cookie.html')
+    return render(request, 'info/refund.html')
 
 
 def delivery(request):

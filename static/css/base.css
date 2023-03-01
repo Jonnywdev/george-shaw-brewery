@@ -774,8 +774,18 @@ header .container {
     text-align: left;
 }
 
+.info-text p {
+    font-size: 15px;
+}
+
 .info-text b {
-    text-decoration: underline;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 25px;
+}
+
+.info-text li {
+    list-style: initial;
 }
 
 /* footer */
