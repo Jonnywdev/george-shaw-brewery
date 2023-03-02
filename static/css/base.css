@@ -322,7 +322,7 @@ header .container {
 
 .search-dropdown {
     transform: translate3d(0, 122px, 0px) !important;
-}
+}x
 
 /* hero image */
 
@@ -431,6 +431,23 @@ header .container {
 .card-img-top:hover {
     opacity: 0.5;
 }
+
+.pd-img {
+    width: 100%;
+    transition: .5s;
+}
+
+.pd-img:hover {
+    width: 150%;
+}
+
+.image-container {
+    width: 100%;
+    overflow: auto;
+}
+
+
+
 
 /* timeline */
 .timeline-container {
@@ -701,6 +718,7 @@ header .container {
     border-color: #dc3545;
     border-radius: 0;
 }
+
 
 /* news */
 .readmore {
