@@ -14,7 +14,7 @@
     <div class="row mb-5">
         <div class="col">
             <h1 class="main-header text-center">Our Beers</h1>
-            <p class="text-center w-75 mx-auto">Our range of beers includes … Brewed in Leigh Lancashire</p>
+            <p class="text-center w-75 mx-auto">Our range of beers includes Stout, Mild, Bitter, IPA & Ale. All brewed in Leigh Lancashire with the orginal recipes first created in the early 1900's.</p>
             {% for c in current_categories %}
                 <a href="{% url 'products' %}?category={{ c.name }}" class="category-badge text-decoration-none">
                     <span class="p-2 mt-2 badge rounded-0 border border-dark text-black">{{ c.friendly_name }}</span>
