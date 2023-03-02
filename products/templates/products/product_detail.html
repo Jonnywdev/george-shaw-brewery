@@ -43,10 +43,18 @@
                 <p class="mb-0 main-header">{{ product.name }}</p>
                 <p class="lead mb-0 text-left font-weight-bold">£{{ product.price }}</p>
                 {% if product.category %}
-                    <p class="small mt-1 mb-0">
-                        <a href="{% url 'products' %}?category={{ product.category.name }}" class="text-muted">
-                            <i class="fa-solid fa-beer-mug-empty mr-1"></i>{{ product.category.friendly_name }}
-                        </a>
+                    <p class="small mt-1 mb-0 cursor text-muted">
+                        <i class="fa-solid fa-beer-mug-empty mr-1 text-muted"></i>{{ product.category.friendly_name }}
+                    </p>
+                {% endif %}
+                {% if product.category %}
+                    <p class="small mt-1 mb-0 cursor text-muted">
+                        {{ product.abv }} ABV
+                    </p>
+                {% endif %}
+                {% if product.ml %}
+                    <p class="small mt-1 mb-0 cursor text-muted">
+                        {{ product.ml }} ml
                     </p>
                 {% endif %}
                 <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">

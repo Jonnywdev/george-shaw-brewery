@@ -322,7 +322,7 @@ header .container {
 
 .search-dropdown {
     transform: translate3d(0, 122px, 0px) !important;
-}x
+}
 
 /* hero image */
 
@@ -330,7 +330,11 @@ header .container {
     width: 100%;
     position: relative;
     z-index: 1;
-    margin-top: 5rem;
+    margin-top: 5.5rem;
+}
+
+.cursor {
+    cursor: default;
 }
 
 .hero-image img {
