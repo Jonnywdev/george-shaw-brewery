@@ -330,6 +330,7 @@ header .container {
     width: 100%;
     position: relative;
     z-index: 1;
+    margin-top: 5rem;
 }
 
 .hero-image img {
