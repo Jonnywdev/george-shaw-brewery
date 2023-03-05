@@ -1,0 +1,1 @@
+web: gunicorn george_shaw.wsgi:application
