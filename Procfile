@@ -1,1 +1,1 @@
-web: gunicorn george-shaw-brewery.wsgi:application
+web: gunicorn george_shaw.wsgi:application
