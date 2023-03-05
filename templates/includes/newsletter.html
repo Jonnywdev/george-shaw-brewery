@@ -6,9 +6,13 @@
         <p>
             And get all the latest Beer news and offers...
         </p>
-        <form action="" method="" class="form">
-            <input type="text" placeholder="Email Address" id="newsletter-email">
-            <input type="submit" value="Sign Me Up" id="sign-me-up">
+        <form enctype="multipart/form-data" method="post" action="{% url 'subscription' %}">
+            {% csrf_token %}
+            {{ form|crispy }}
+            <div class="form-group">
+                <input type="email" class="form-control" id="userEmail newsletter-email" placeholder="Enter email" required>
+            </div>
+            <input type="submit" value="Sign me up" id="sign-me-up" class="btn">     
         </form>
     </div>
     <div class="connect">
@@ -26,3 +30,14 @@
         </div>
     </div>
 </div>
+
+  <!-- message if email is sent -->
+  {% if messages %}
+    {% for message in messages %}
+      <div class="my-5 alert alert-success">
+        <h5 class="m-0">
+            {{ message }}
+        </h5>
+      </div>
+    {% endfor %}
+  {% endif %}
