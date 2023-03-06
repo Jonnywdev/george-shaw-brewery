@@ -329,11 +329,11 @@ header .container {
     box-sizing: border-box;
     height: 40px;
     padding: 10px 12px;
-    border: 1px solid black;
+    border: 1px solid black !important;
     border-radius: 0px;
     background-color: white;
-    box-shadow: none;
-    width: 100%;
+    box-shadow: none  !important;
+    width: 100%  !important;
 }
 
 /* hero image */
@@ -1186,6 +1186,10 @@ footer {
     .footer-copy {
         font-size: 15px;
     }
+
+    .alert h5 {
+        font-size: 15px !important;
+    }
 }
 
 @media (max-width: 420px) {
@@ -1322,5 +1326,9 @@ footer {
 
     .footer-copy {
         font-size: 12px;
+    }
+
+    .alert h5 {
+        font-size: 12px !important;
     }
 }
