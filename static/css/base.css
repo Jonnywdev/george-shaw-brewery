@@ -1241,6 +1241,10 @@ footer {
     }
 
     /* footer */
+    footer {
+        bottom: -3px;
+    }
+
     .footer-content h3 {
         font-size: 0.8rem;
     }
