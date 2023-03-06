@@ -712,6 +712,11 @@ header .container {
     cursor: pointer;
 }
 
+.product-name {
+    align-items: end;
+    display: flex;
+}
+
 .custom-checkbox .custom-control-label::before {
     border-radius: 0;
     border-color: #dc3545;
