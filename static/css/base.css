@@ -1186,6 +1186,15 @@ footer {
         display: none;
     }
 
+    /* header */
+    .logo-wrapped {
+        width: 20%;
+    }
+
+    .mobile-top-icons {
+        width: 30%;
+        text-align: right;
+    }
     /* hero image */
     .hero-image {
         margin-top: 3rem;
